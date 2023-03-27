@@ -26,4 +26,4 @@ class MeetUp{
   
 }
 
-let meetups = [new MeetUp(1, 'ksdfldkf', 'dnjksnjdkf', ['cool', 'super'], '13 Aug', 'London'), new MeetUp(2, 'ksdfldkf', 'dnjksnjdkf', ['cool', 'super'], '13 Aug', 'London')];
+
