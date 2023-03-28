@@ -9,7 +9,7 @@ app.get('/meeetups', function(req, res){
   res.send(meetups)
 })
 
-app.get('/meeetUps/:id', function(req, res){
+app.get('/meeetups/:id', function(req, res){
   meetups.forEach(element => {
     if(element.id == req.params.id)
     res.send(element)
@@ -20,7 +20,7 @@ app.delete('/meetups/:id', function(req, res){
   meetups.forEach((element, index) => {
     if(element.id == req.params.id)
     {
-      meetUps.slice(index, 1)
+      meetups.slice(index, 1)
       res.status(201).end()
     }
   }
@@ -43,7 +43,7 @@ class Meetup{
   }
 
   create(id, title, description, keywords, time, place) {
-    return new MeetUp(id, title, description, keywords, time, place)
+    return new Meetup(id, title, description, keywords, time, place)
   }
   
 }
