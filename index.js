@@ -5,8 +5,8 @@ app.listen(3000, () => {
   console.log('Server has started on port 3000')
 })
 
-app.get('/meeetUps', function(req, res){
-  res.send(meetUps)
+app.get('/meeetups', function(req, res){
+  res.send(meetups)
 })
 
 app.get('/meeetUps/:id', function(req, res){
