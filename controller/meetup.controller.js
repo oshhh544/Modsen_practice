@@ -24,7 +24,7 @@ class MeetupController {
 
     async update(req, res) {
       const {title, description, keywords, time, place} = req.body;
-      const meetup = await db.query('UPDATE meetups set title = $1, description = $2, tags = $3, time = $4, place = $5 WHERE id = $6 RETURNING *', [title, description, keywords, time, place, req.params.id]);
+      const meetup = await db.query('UPDATE meetups set title = $1, description = $2, keywords = $3, time = $4, place = $5 WHERE id = $6 RETURNING *', [title, description, keywords, time, place, req.params.id]);
       res.status(201);
       res.json(meetup.rows[0]);
     }
