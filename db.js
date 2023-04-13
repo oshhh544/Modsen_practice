@@ -7,4 +7,4 @@ const pool = new Pool({
      database:"meetups"
 })
 
-module.express = pool
+module.exports = pool
